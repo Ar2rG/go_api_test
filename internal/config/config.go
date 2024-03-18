@@ -21,7 +21,8 @@ type HTTPServer struct {
 }
 
 func MustLoad() *Config {
-	configPath := os.Getenv("CONFIG_PATH") // Загрузка данных из переменной окружения
+	configPath := "../.././config/local.yaml" // Прямой путь до файла конфигурации
+	// configPath := os.Getenv("CONFIG_PATH") // Загрузка данных из переменной окружения
 	if configPath == "" {
 		log.Fatal("CONFIG_PATH is not set")
 	}
